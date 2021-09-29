@@ -10,5 +10,6 @@ appname = "shortener"
 urlpatterns = [
     # Home view
     path("", views.home_view, name="home"),
-    path('<str:shortened_part>', views.redirect_url_view, name='redirect'),
+    path('redirect/<str:shortened_part>', views.redirect_url_view, name='redirect'),
+    path('showFreq', views.apiView)
 ]
